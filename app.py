@@ -31,6 +31,7 @@ api.add_resource(Store, '/store/<string:name>')
 api.add_resource(StoreList, '/stores')
 api.add_resource(UserRegister, '/register')
 
+db.init_app(app)
+
 if __name__ == '__main__':
-    db.init_app(app)
     app.run(debug=True)  # important to mention debug=True
